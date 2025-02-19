@@ -1,6 +1,6 @@
 # Capistrano::ASDF
 
-ASDF support for Capistrano v3:
+ASDF support for Capistrano v3 & asdf v 0.16.0
 
 ## Notes
 
