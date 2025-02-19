@@ -8,7 +8,12 @@ ASDF_DEFAULT_NODEJS_BINS = %w{node npm yarn}
 ASDF_DEFAULT_WRAPPER_TEMPLATES = <<~WRAPPER
   #!/usr/bin/env bash
 
-  . @@ASDF_USER_PATH@@/asdf.sh
+  echo $PATH
+  export PATH="$HOME/bin:$PATH"
+  export ASDF_DATA_DIR="/home/$USER/.asdf"
+  export PATH="$ASDF_DATA_DIR/shims:$PATH"
+  echo $PATH
+
   exec "$@"
 WRAPPER
 
